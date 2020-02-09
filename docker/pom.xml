@@ -26,6 +26,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -71,7 +76,8 @@
                     <!-- <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>-->
                     <!-- 指定远程 Docker api地址 -->
                     <!-- <dockerHost>http://192.168.70.128:2375</dockerHost> -->
-                    <dockerHost>http://zouchanglin.cn:2375</dockerHost>
+                    <!-- <dockerHost>http://zouchanglin.cn:2375</dockerHost> -->
+                    <dockerHost>http://lslm.live:2375</dockerHost>
                     <!-- 复制Jar包到指定的Docker容器 -->
                     <resources>
                         <resource>
