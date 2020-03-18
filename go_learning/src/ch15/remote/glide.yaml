@@ -1,0 +1,5 @@
+package: ch15/remote
+import: []
+testImport:
+- package: github.com/easierway/concurrent_map
+  version: 0.9.1
