@@ -1,0 +1,24 @@
+spring:
+  mail:
+    host: smtp.163.com
+    username: 15291418231@163.com
+    password: KBYHHNIOBQVUSACC
+    port: 465
+    protocol: smtp
+    default-encoding: utf-8
+    properties:
+      mail:
+        imap:
+          ssl:
+            socketFactory:
+              fallback: false
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+            socketFactory:
+              class: com.fintech.modules.base.util.mail.MailSSLSocketFactory
+          starttls:
+            enable: true
+            required: true
+      test-connection: false

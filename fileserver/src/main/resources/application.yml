@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /fileserver
+  port: 8090
+spring:
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
