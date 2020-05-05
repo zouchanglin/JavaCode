@@ -1,18 +1,2 @@
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/buckmoo?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    username: root
-    password: 123456
-    type: com.alibaba.druid.pool.DruidDataSource
-    druid:
-      initial-size: 5
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      min-idle: 5
-      max-active: 50
-      max-wait: 50000
-      time-between-eviction-runs-millis: 50000
-  jpa:
-    show-sql: true
-  jackson:
-    default-property-inclusion: non_null
+aes:
+  length: 128

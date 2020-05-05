@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="c" class="tim.edu.spring_study.depend.C">
+        <constructor-arg index="0" ref="d"></constructor-arg>
+    </bean>
+    <bean id="d" class="tim.edu.spring_study.depend.D">
+        <constructor-arg index="0" ref="c"></constructor-arg>
+    </bean>
+</beans>
