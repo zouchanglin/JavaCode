@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <todo>
+        <todo-title slot="todo-title" title="今日动漫推荐"></todo-title>
+        <todo-items slot="todo-items" v-for="(item, index) in todoItems" v-bind:item="item" v-bind:index="index" :key="index"></todo-items>
+    </todo>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script type="text/javascript">
+    Vue.component('todo', {
+        template: '<div>\
+                    <slot name="todo-title"></slot>\
+                    <ul>\
+                        <slot name="todo-items"></slot>\
+                    </ul>\
+               </div>'
+    });
+    Vue.component('todo-title', {
+        props: ['title'],
+        template: '<div>{{title}}</div>'
+    });
+    Vue.component('todo-items', {
+        props: ['item', 'index'],
+        template: '<li>{{index + 1}}. {{item}}</li>'
+    });
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            todoItems: [
+                '《刀剑神域3》',
+                '《关于我转生成为史莱姆这件事》',
+                '《实力至上主义教室》']
+        }
+    });
+</script>
+</body>
+</html>

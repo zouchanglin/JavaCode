@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="message"/> Input 内容：{{message}}<br>
+    下拉框：
+    <select v-model="selected">
+        <option disabled value="">请选择</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+    </select>
+    <span>选中的值: {{ selected }}</span>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Message',
+            selected: ""
+        }
+    });
+</script>
+</body>
+</html>

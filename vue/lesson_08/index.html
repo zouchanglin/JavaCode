@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <my-component-li v-for="item in items" v-bind:item="item">
+
+        </my-component-li>
+    </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script type="text/javascript">
+    Vue.component("my-component-li", {
+        props: ['item'],
+        template: "<li>{{item}}</li>"
+    });
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            items: ["AAA", "BBB", "CCC", "DDD"]
+        }
+    });
+</script>
+</body>
+</html>
