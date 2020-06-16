@@ -12,9 +12,9 @@ public class JdbcUtil {
 	public static Connection getConnection() {
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			String url = "jdbc:sqlserver://localhost:1435; DatabaseName=LuceneDB2";
+			String url = "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=LuceneDB2";
 			String username = "sa";
-			String password = "415T0905t0205@";
+			String password = "123456";
 			connect = DriverManager.getConnection(url, username, password);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
